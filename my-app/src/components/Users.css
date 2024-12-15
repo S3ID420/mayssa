@@ -1,0 +1,218 @@
+:root {
+  --primary-color: #FF69B4;
+  --secondary-color: #FFB6C1;
+  --background-color: #FFF0F5;
+  --text-color: #4A4A4A;
+  --card-shadow: 0 4px 6px rgba(255, 105, 180, 0.2);
+}
+
+.users-management-container {
+  
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  margin-bottom: 30px;
+  color: #FF69B4; /* Hot pink title */
+  text-align: center;
+ 
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2); /* Soft text shadow */
+
+}
+
+.add-user-btn {
+  background-color: #FF69B4; /* Soft pink */
+  color: white;
+  border: 2px solid #FFB6C1; /* Lighter pink border */
+  padding: 12px 25px;
+  border-radius: 25px; /* Very rounded corners for a cute look */
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2); /* Soft shadow */
+}
+
+.add-user-btn:hover {
+  background-color: #FF1493; /* Deeper pink on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(255, 105, 180, 0.3);
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  
+}
+
+
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.role-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.role-badge.user {
+  background-color: #E6E6FA;
+  color: #8A2BE2;
+}
+
+.role-badge.admin {
+  background-color: #967969;
+  color: wheat;
+}
+
+.role-badge.superadmin {
+  background-color: #7393b3;
+  color: white;
+}
+
+.user-details {
+  margin-bottom: 15px;
+}
+
+.user-actions {
+  display: flex;
+ 
+  gap: 10px;
+}
+
+.user-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+.role-actions{
+  display:flex;
+  gap: 8px;
+}
+
+.remove-btn {
+  background-color: #ffb6c1;
+  color: #dc143c;
+}
+
+.promote-btn {
+  background-color: #b6d0e2;
+  color: white;
+}
+
+.demote-btn {
+  background-color: #F2d2bd;
+  color: #4A4A4A;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: var(--card-shadow);
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal input, 
+.modal select {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.cancel-btn {
+  background-color: #E0E0E0;
+  color: #4A4A4A;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  border: 4px solid var(--secondary-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

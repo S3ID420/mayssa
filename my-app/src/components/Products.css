@@ -1,0 +1,189 @@
+
+.products-container {
+  padding: 30px;
+  max-width: 1600px;
+  
+  height: 100vh;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  color: #FF69B4; /* Hot pink title */
+  text-align: center;
+  
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2); /* Soft text shadow */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: white;
+  border: 2px solid #FFB6C1; /* Soft pink border */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.3);
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '✿'; /* Cute flower decoration */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FF69B4;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+  border-color: #FF1493; /* Deeper pink on hover */
+}
+
+.product-image {
+  width: 100%;
+  height: 250px; /* Fixed height for consistent look */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1); /* Slight image zoom on hover */
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #4A4A4A;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: #FF69B4;
+  font-weight: bold;
+  background-color: #FFF0F5;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-product-btn {
+  background-color: #FF69B4; /* Soft pink */
+  color: white;
+  border: 2px solid #FFB6C1; /* Lighter pink border */
+  padding: 12px 25px;
+  border-radius: 25px; /* Very rounded corners for a cute look */
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2); /* Soft shadow */
+}
+
+.add-product-btn:hover {
+  background-color: #FF1493; /* Deeper pink on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(255, 105, 180, 0.3);
+}
+
+.add-product-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(255, 105, 180, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input,
+.modal-content textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  border: 4px solid var(--secondary-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Kawaii+Font&display=swap');
+
+
+
+.orders-management-container {
+  
+  margin: 0 ;
+  padding: 20px;
+  
+  
+  
+}
+
+.orders-management-container h1 {
+  text-align: center;
+  color: #ff69b4;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.5);
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  background-color: #fff5f9;
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 192, 203, 0.4);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-id {
+  font-weight: bold;
+  color: #967969;
+}
+
+.status-tag {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.status-tag.shipped {
+    background-color: #986868;
+    color: wheat;
+}
+
+.status-tag.canceled {
+  background-color: #ffb6c1;
+  color: #dc143c;
+}
+
+.order-details p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.order-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-shipped {
+  background-color: #986868;
+  color: wheat;
+}
+
+.btn-canceled {
+  background-color: #ffb6c1;
+  color: #dc143c;
+}
+
+.btn-remove {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.order-actions button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.no-orders-cute {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff5f9;
+  border-radius: 15px;
+  color: #ff69b4;
+}
+
+.error-banner {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.status-buttons{
+    display: flex;
+    gap: 4px;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn-cancel {
+    background-color: #9E9E9E;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-submit {
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-add-order {
+    background-color: #FF69B4; /* Soft pink */
+    color: white;
+    border: 2px solid #FFB6C1; /* Lighter pink border */
+    padding: 12px 25px;
+    border-radius: 25px; /* Very rounded corners for a cute look */
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2); /* Soft shadow */
+  }
+  
+  .btn-add-order:hover {
+    background-color: #FF1493; /* Deeper pink on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(255, 105, 180, 0.3);
+  }
+  
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }

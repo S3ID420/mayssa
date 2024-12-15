@@ -1,0 +1,61 @@
+.sidebar {
+  width: 250px;
+  background-color: #FFB6C1; /* Soft pink background */
+  color: #4A4A4A;
+  padding: 20px;
+  
+ 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+  font-family: 'Pacifico', cursive; /* Playful, girly font */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft text shadow */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 20px; /* More rounded links */
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparency */
+}
+
+.nav-link:hover {
+  background-color: #b6a093; /* Hot pink on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active {
+  background-color: #967969; /* Deep pink for active state */
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-divider {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 15px 0;
+  border-radius: 1px;
+}
+
+
+.nav-link::before {
+  content: '✿'; 
+  margin-right: 10px;
+  color: #FFFFFF;
+}

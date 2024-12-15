@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap');
+
+
+
+
+.girly-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+  overflow: hidden;
+  perspective: 1000px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+  font-family: 'Indie Flower', cursive;
+}
+
+.cute-card {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(255, 105, 180, 0.2);
+  padding: 50px 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  
+  transition: all 0.4s ease;
+  border: 3px solid #ffc0cb;
+}
+
+.cute-card:hover {
+  transform: rotateX(-5deg) rotateY(2deg) scale(1.02);
+  box-shadow: 0 30px 60px rgba(255, 105, 180, 0.3);
+}
+
+.girly-title {
+  font-family: 'Pacifico', cursive;
+  color: #ff69b4;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+}
+
+.sparkle-divider {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff69b4, #ffc0cb);
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.girly-subtitle {
+  color: #ff1493;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+
+.heart-corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff69b4'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-45deg);
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(135deg);
+}
+
+.bow-decoration {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff69b4'%3E%3Cpath d='M20 6h-3c0-1.5-1.5-3-4-3S9 4.5 9 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7 0c1 0 1.5.5 1.5 1.5S14 9 13 9s-1.5-.5-1.5-1.5S12 6 13 6zm2 12H7v-2h8v2zm3-4H7v-2h11v2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.4;
+}
+
+.left-bow {
+  top: -30px;
+  left: -20px;
+  transform: rotate(-20deg);
+}
+
+.right-bow {
+  bottom: -30px;
+  right: -20px;
+  transform: rotate(20deg);
+}
+
+@media (max-width: 600px) {
+  .cute-card {
+    padding: 30px 20px;
+  }
+
+  .girly-title {
+    font-size: 2.3rem;
+  }
+
+  .girly-subtitle {
+    font-size: 1.1rem;
+  }
+}
